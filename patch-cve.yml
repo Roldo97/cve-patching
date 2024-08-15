@@ -1,0 +1,6 @@
+---
+- name: Installs CVEs
+  hosts: "{{ host_to_apply | default('localhost') }}"
+  become: true
+  roles:
+    - cve-patch-rhel
